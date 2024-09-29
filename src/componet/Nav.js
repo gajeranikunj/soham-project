@@ -35,13 +35,16 @@ function Nav() {
             boxShadow: 'none',
             position: "fixed",
             top: 0,
-            backgroundColor: "transparent"
+            backgroundColor: "transparent",
+            padding: "0px"
         }}>
             <Container fixed sx={{
                 fontFamily: 'Teko',
                 border: "1px solid rgba(225,225,225,0.2)",
                 backgroundColor: 'black',
-                boxShadow: "0px"
+                boxShadow: "0px",
+                padding: "0px"
+
             }}>
                 <Toolbar disableGutters>
                     <Box sx={{ display: { xs: 'none', md: 'flex' }, flexGrow: 1 }}>
@@ -75,7 +78,7 @@ function Nav() {
                                 <MenuItem key={page.name} onClick={handleCloseNavMenu}>
                                     <Link to={page.path} style={{ textDecoration: 'none' }}>
                                         <Typography sx={{
-                                            textAlign: 'center', color: "white", '&:hover': {
+                                            textAlign: 'center', color: "#F67A45", '&:hover': {
                                                 color: 'orange',
                                             },
                                             height: "100%"
@@ -113,19 +116,19 @@ function Nav() {
                                 sx={{
                                     fontWeight: "bold",
                                     height: { lg: "40px", md: "35px", sm: "30px", xs: "25px" },
-                                    width: { lg: "140px", md: "120px", sm: "100px", xs: "80px" },
+                                    width: { lg: "140px", md: "120px", sm: "100px", xs: "90px" },
                                     fontSize: { lg: "16px", md: "15px", sm: "14px", xs: "12px" },
                                     backgroundColor: "black",
                                     color: "white",
-                                    border:"1px solid #F67A45",
+                                    border: "1px solid #F67A45",
                                     '&:hover': {
                                         backgroundColor: "#B77A3E"
                                     }
                                 }}
-                                >
+                            >
                                 Join Now
                             </Button>
-                                </Link>
+                        </Link>
                         {/* </Tooltip> */}
                     </Box>
                 </Toolbar>

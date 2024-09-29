@@ -168,7 +168,7 @@ function Section3() {
                         sx={{
                           width: isMobile ? "100%" : "350px",
                           height: isMobile ? "200px" : "400px",
-                          padding: "20px",
+                          padding: isMobile ?"0px":"20px",
                         }}
                       >
                         <Box

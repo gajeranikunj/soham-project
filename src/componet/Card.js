@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { Grid, Card, CardContent, CardMedia, CardActions, Button, Typography } from '@mui/material';
+import { Grid, Card, CardContent, CardMedia, CardActions, Button, Typography, Container } from '@mui/material';
 
 const ImgMediaCard = ({ title, description, image }) => {
     return (
-        <Card sx={{ maxWidth: 345, margin: 2,backgroundColor:"black" }}>
+        <Card sx={{ maxWidth: 345, margin: 2, backgroundColor: "black" }}>
             <CardMedia component="img" alt={title} height="180" image={image} />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div" color='white'>
@@ -14,8 +14,8 @@ const ImgMediaCard = ({ title, description, image }) => {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button className='buttonn' sx={{color:"white",backgroundColor:"#F67A45"}} size="small">Share</Button>
-                <Button size="small" className='button' sx={{backgroundColor:"black",color:"white"}}>Learn More</Button>
+                <Button className='buttonn' sx={{ color: "white", backgroundColor: "#F67A45" }} size="small">Share</Button>
+                <Button size="small" className='button' sx={{ backgroundColor: "black", color: "white" }}>Learn More</Button>
             </CardActions>
         </Card>
     );
@@ -33,13 +33,15 @@ function Carddata() {
     ];
 
     return (
-        <Grid container spacing={2} justifyContent="center">
-            {cards.map((card, index) => (
-                <Grid item xs={12} sm={6} md={4} key={index}>
-                    <ImgMediaCard title={card.title} description={card.description} image={card.image} />
-                </Grid>
-            ))}
-        </Grid>
+        <Container fixed>
+            <Grid container spacing={2} justifyContent="center">
+                {cards.map((card, index) => (
+                    <Grid item xs={12} sm={6} md={4} key={index}>
+                        <ImgMediaCard title={card.title} description={card.description} image={card.image} />
+                    </Grid>
+                ))}
+            </Grid>
+        </Container>
     );
 };
 

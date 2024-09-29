@@ -20,7 +20,7 @@ function Contect() {
         <Titels Name={"Contect"} url={"https://wordpress.themeholy.com/fitkit/wp-content/themes/fitkit/assets/img/breadcumb-thumb.png"} />
           
             <Box>
-                <Container maxWidth="md">
+                <Container fixed>
                     <Box sx={{ width: "85%", margin: "auto", marginBottom: "100px" }}>
 
 
